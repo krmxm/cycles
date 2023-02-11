@@ -61,19 +61,19 @@ for (let i = 0; i < 3; i++) {
 // *****
 // ******
 
-let result = '';
+let resultFirTree = '';
 const len = 7;
 
 for (let i=1; i < len; i++) {
 
     for (let j = 0; j < i; j++) {
-        result += "*";
+        resultFirTree += "*";
     }
 
-    result += '/n';
+    resultFirTree += '\n';
 }
 
-console.log(result);
+console.log(resultFirTree);
 
 // метки
 
@@ -195,8 +195,80 @@ function firstTask() {
     const result = [];
 
     // Пишем решение вот тут
-    
+     for (let i = 0; i < arr.length; i++) {
+        result [i] = arr [i];
+     }
     
     // Не трогаем
     return result;
 }
+
+console.log(firstTask());
+
+// 2.Измените данный массив так, чтобы все числа были увеличены в 2 раза, а если попадается строка
+// строка - то к ней было добавлено " - done".
+// Для определения типа данных используйте typeof();
+// Должно получиться: [ 10, 20, 'Shopping - done', 40, 'Homework - done' ]
+
+function secondTask() {
+    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+    const data = [5, 10, 'Shopping', 20, 'Homework'];
+
+    for (let i=0; i < data.length; i++) {
+        if( typeof(data[i]) === 'number' ) {
+            data[i] = data[i] * 2;
+        } else if ( typeof(data[i]) === 'string') {
+                data[i] = data[i]  + ' - done';
+            }
+    }
+
+    return data;
+}
+
+console.log(secondTask());
+
+// 3. Разверните массив data наоборот при помощи цикла и запишите данные в массив result.
+// Должно получиться: [ 'Homework', 20, 'Shopping', 10, 5 ]
+
+function thirdTask() {
+    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+    const data = [5, 10, 'Shopping', 20, 'Homework'];
+    const result = [];
+
+    for ( let i = 1; i <= data.length; i++ ) {
+        result[i - 1] = data[data.length - i];
+    }
+
+    // Не трогаем
+    return result;
+}
+
+console.log(thirdTask());
+
+// Задача на формирование фигуры
+
+// Сейчас вам необходимо написать код, который при помощи звездочек (*) в консоли нарисует вот такую фигуру:
+
+//      *
+//     ***
+//    *****
+//   *******
+//  *********
+// ***********
+
+let result = '';
+const lines = 5;
+
+for (let i = 0; i <= lines; i++) {
+
+    for (let j = 0; j < lines - i; j++) {
+        result += ' ';
+    }
+    for( let k = 0; k <2 * i + 1; k++) {
+        result += '*';
+    }
+    
+    result += '\n';
+}
+
+console.log(result);
