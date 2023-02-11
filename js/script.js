@@ -149,7 +149,6 @@ thirdTask();
 // }
 
 function fourthTask() {
-    // Пишем решение вот тут
 
     let i = 2;
 
@@ -170,6 +169,7 @@ fourthTask();
 // элементы массива можно сформировать так же, как и обращаться к ним: arr[0].
 
 function fifthTask() {
+
     let arr = [];
 
     for (let i = 5; i <= 10; i++) {
@@ -190,16 +190,14 @@ fifthTask();
 // Должен получиться точно такой же массив.
 
 function firstTask() {
-    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+
     const arr = [3, 5, 8, 16, 20, 23, 50];
     const result = [];
 
-    // Пишем решение вот тут
      for (let i = 0; i < arr.length; i++) {
         result [i] = arr [i];
      }
     
-    // Не трогаем
     return result;
 }
 
@@ -211,7 +209,7 @@ console.log(firstTask());
 // Должно получиться: [ 10, 20, 'Shopping - done', 40, 'Homework - done' ]
 
 function secondTask() {
-    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+
     const data = [5, 10, 'Shopping', 20, 'Homework'];
 
     for (let i=0; i < data.length; i++) {
@@ -231,7 +229,7 @@ console.log(secondTask());
 // Должно получиться: [ 'Homework', 20, 'Shopping', 10, 5 ]
 
 function thirdTask() {
-    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+
     const data = [5, 10, 'Shopping', 20, 'Homework'];
     const result = [];
 
@@ -239,7 +237,6 @@ function thirdTask() {
         result[i - 1] = data[data.length - i];
     }
 
-    // Не трогаем
     return result;
 }
 
